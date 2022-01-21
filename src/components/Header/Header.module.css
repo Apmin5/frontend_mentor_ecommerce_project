@@ -1,0 +1,134 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    padding:24px;
+    align-items: center;
+    border-bottom: 2px solid rgb(223, 207, 207);
+    position: sticky;
+    background-color: #f3efef;
+    top: 0;
+    z-index: 20;
+    
+}
+
+.active{
+    display: block !important;
+}
+.closeBtn{
+    z-index: 22;
+    position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+}
+.closeBtn:hover{
+    background-color: #eee;
+}
+.menuBtn,.closeBtn{
+    display: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.menuBtn{
+    padding: 5px;
+}
+.menuBtn:hover{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.left{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    margin-right: 20px;
+}
+
+.nav{
+    display: flex;
+    padding: 24px;
+    transition: all .5s ease;
+}
+
+.nav a{
+    padding: 0 0 47px 0;
+    margin-right: 30px;
+    font-size: 20px;
+    color:hsl(219, 9%, 45%);
+}
+.nav a:hover{
+    border-bottom: 4px solid orange;
+}
+.right{
+    display: flex;
+    align-items: center;
+}
+
+.right .cartBox{
+    margin-right: 24px;
+}
+.right .cart{
+    position: relative;
+}
+.right .cart:hover{
+    opacity: .8;
+}
+.right .cartBox .badges{
+    position: absolute;
+}
+
+.right .user img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.right .user img:hover{
+    border:2px solid orange;
+}
+
+
+@media (max-width:765px) {
+    .menuBtn{
+        display: block;
+        margin-right: 20px;
+    }
+    .navCon{
+        position: absolute;
+        background-color: rgb(158, 146, 146);
+        padding-top:70px ;
+        width: 50%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+    .nav{
+        flex-direction: column;
+        
+        padding: 0;
+    }
+    
+    .nav a{
+        display: inline-block;
+        width: 100%;
+        padding: 10px 30px;
+        color: #fff;
+    }
+    .nav a:hover{
+        border: none;
+        background-color: #eee;
+        color: #000;
+    }
+    
+    
+}
+
+@media (max-width:400px) {
+    .container{
+        padding: 5px 2px;
+    }
+}

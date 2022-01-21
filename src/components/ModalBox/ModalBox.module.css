@@ -1,0 +1,79 @@
+.container{
+    flex: 50%;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+}
+.imgBox{
+    width: 100%;
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+.leftArr,.rightArr,.closeBtn{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    background-color: #eee;
+    border-radius: 50%;
+    line-height: 25px;
+}
+
+.closeBtn{
+    background-color: #333;
+    position: absolute;
+    top: -15%;
+    right: -10%;
+}
+.closeBtn:hover{
+    background-color: #eee;
+}
+.rightArr{
+    position: absolute;
+    top: 50%;
+    right: -10px;
+}
+.leftArr{
+    position: absolute;
+    left: -10px;
+    top: 50%;
+}
+
+.imgBox img{
+    max-width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.ulbox {
+    width: 400px;
+}
+.ulbox ul{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    padding-left: 20px;
+}
+.active{
+    opacity: .5 !important;
+}
+.ulbox li{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.ulbox li:hover{
+    opacity: .8;
+}
+.ulbox li img{
+    width: 100%;
+    border-radius: 20px;
+}
+@media (max-width:765px) {
+    .Dnone{
+        display: none;
+    }
+}
+
