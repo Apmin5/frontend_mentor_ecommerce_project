@@ -4,14 +4,14 @@
     position: absolute;
     background-color: #eee;
     top: -100vh;
-    right: 20px;
+    right: -20px;
     border-radius: 20px;
     box-shadow: 4px 4px 4px #b9aeae,-4px -4px 4px #fff;
     transition: all .5s ease;
-    
+    z-index: 3;
 }
 .active{
-    top: 80%;
+    top: 120%;
     animation-name: activeItem;
     animation-duration: .5s;
     animation-direction: alternate;
@@ -27,6 +27,10 @@
     padding:10px;
     font-weight: bold;
 }
+.ptag{
+    line-height: 100px;
+    text-align: center;
+}
 .cardBody{
     padding: 20px;
     display: flex;
@@ -36,7 +40,7 @@
     margin-right: 20px;
 }
 .proName {
-    font-size: 12px;
+    font-size: 11px;
 }
 .price{
     font-size: 14px;
@@ -54,13 +58,23 @@
     width: 100%;
     border-radius: 10px;
 }
-
+.deleteBtn{
+    opacity: .8;
+}
+.deleteBtn:hover{
+    opacity: 1;
+    
+}
 .checkoutBtn{
     width: 85%;
     padding: 15px 20px;
     background-color: orange;
     margin: 0 20px;
     border-radius: 10px;
+}
+.checkoutBtn:hover{
+    background-color:#e9810a;
+    color: #fff;
 }
 
 
@@ -77,5 +91,12 @@
         transform: rotate(90deg);
     }
     
+    
+}
+@media (max-width:400px) {
+    .active{
+        top: 120%;
+        right:-25px;
+    }
     
 }

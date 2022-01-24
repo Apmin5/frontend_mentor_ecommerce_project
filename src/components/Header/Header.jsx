@@ -3,7 +3,10 @@ import { useState } from 'react';
 import ShowCartPro from '../Cart/ShowCartPro';
 import styles from "./Header.module.css";
 
-const Header = () => {
+const Header = (props) => {
+    const value = props.value;
+    let count = value.length == 0 ? false : value[0].count;
+    
     const logo = "images/logo.svg";
     const cart = "images/icon-cart.svg";
     const user = "images/image-avatar.png";
@@ -12,6 +15,7 @@ const Header = () => {
     const [showMenu , setShowMenu] = useState(false);
     const [showCart , setShowCart] = useState(false);
 
+    
     const showMenuHandler = () => {
         setShowMenu(true);
     }
@@ -63,9 +67,11 @@ const Header = () => {
                     >
                         <img src={`${process.env.PUBLIC_URL}/${cart}`} alt="cart" />
                     </button>
-                    <span className={styles.badges}></span>
+                    {
+                        count && <span className={styles.badges}>{count}</span>
+                    }
                    
-                    <ShowCartPro onShow={showCart} />
+                    <ShowCartPro value={value} onShow={showCart} remove={()=>props.remove()} />
                 </div>
                 <button className={styles.user}>
                     <img src={`${process.env.PUBLIC_URL}/${user}`} alt="user" />

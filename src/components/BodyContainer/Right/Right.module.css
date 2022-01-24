@@ -5,8 +5,14 @@
     margin: 30px;
 }
 
+.container a{
+    color: orange;
+    font-size: 10px;
+    font-weight: bold;
+}
 .container h2{
     margin: 20px 0;
+    
 }
 .priceBox{
     display: flex;
@@ -70,25 +76,19 @@
 }
 .btnCon .rightBtn{
     padding: 10px 20px;
-    background-color:#e9810a;
-    color: #eee;
+    font-size: 16px;
+    background-color: orange;
+    color: #333;
     display: flex;
     align-items: center;
     border-radius: 10px;
     cursor: pointer;
 }
 .btnCon .rightBtn:hover{
-    background-color: #CB6211;
+    background-color:#e9810a;
+    color: #fff;
   }
-@media (max-width:700px) {
-    .container{
-        padding: 0 20px;
-        width: 100%;
-    }
-    .btnCon{
-        flex-direction:row !important;
-    }  
-}
+
 @media (max-width:822px) {
     .btnCon{
         flex-direction: column;
@@ -97,12 +97,46 @@
     .btnCon .leftBtn{
         margin-bottom: 20px;
     }
+    .leftBtn button{
+        padding: 5px 24px;
+    }
+    .priceBox{
+        display: inline-flex;
+        margin-right: 20px;
+    }
     .container{
         margin-left: 0;
     }
 }
+@media (max-width:700px) {
+    .container{
+        padding: 0 20px;
+        width: 100%;
+    }
+     
+}
 @media (max-width:500px) {
     .container{
-        margin-top: 0;
+        margin-top: 20px;
+    }
+    .container h2{
+        margin-top: 10px;
+    }
+    .btnCon{
+        flex-direction: column!important;
+    }
+    .leftBtn{
+        width: 100%;
+        justify-content: space-around;
+    }
+    .leftBtn .btnOne, .leftBtn .btnTwo{
+        padding: 5px 50px;
+    }
+    .rightBtn{
+        width: 100%;
+        justify-content: center;
+    }
+    .rightBtn svg{
+        margin-right: 10px;
     }
 }

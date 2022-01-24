@@ -3,14 +3,14 @@
     justify-content: space-between;
     width: 100%;
     max-width: 1440px;
-    padding:24px;
+    padding: 20px;
     align-items: center;
     border-bottom: 2px solid rgb(223, 207, 207);
     position: sticky;
     background-color: #f3efef;
     top: 0;
     z-index: 20;
-    
+    transition: all .4s ease-in;
 }
 
 .active{
@@ -55,12 +55,13 @@
 }
 
 .nav a{
-    padding: 0 0 47px 0;
+    padding: 0 0 42px 0;
     margin-right: 30px;
     font-size: 20px;
     color:hsl(219, 9%, 45%);
 }
 .nav a:hover{
+    transition: border-bottom .2s ease-in ;
     border-bottom: 4px solid orange;
 }
 .right{
@@ -70,15 +71,24 @@
 
 .right .cartBox{
     margin-right: 24px;
-}
-.right .cart{
     position: relative;
+
 }
+
+    
 .right .cart:hover{
     opacity: .8;
 }
 .right .cartBox .badges{
     position: absolute;
+    background-color: orange;
+    padding: 2px 5px;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 100%;
+    color: #fff;
+    top: -45%;
+    right: -8px;
 }
 
 .right .user img{
@@ -90,7 +100,14 @@
     border:2px solid orange;
 }
 
-
+@keyframes hoverChange {
+    0%{
+        border-bottom: 0;
+    }
+    100%{
+        border-bottom: 4px;
+    }
+}
 @media (max-width:765px) {
     .menuBtn{
         display: block;
@@ -105,6 +122,7 @@
         top: 0;
         left: 0;
         display: none;
+        z-index: 20;
     }
     .nav{
         flex-direction: column;
@@ -129,6 +147,7 @@
 
 @media (max-width:400px) {
     .container{
+        position: static;
         padding: 5px 2px;
     }
 }

@@ -8,7 +8,7 @@ body{
 }
 .container{
   max-width: 1440px;
-  margin: 0 50px;
+  margin: 0 150px;
 }
 button{
   border: none;
@@ -18,10 +18,15 @@ button{
 li{list-style: none;}
 a{text-decoration: none;}
 
-
+@media (max-width:1120px) {
+  .container{
+    margin: 0 50px;
+  }
+}
 @media (max-width:900px) {
   .container{
     margin: 0;
+    margin-bottom: 30px;
   }
 }
 /* @keyframes App-logo-spin {
